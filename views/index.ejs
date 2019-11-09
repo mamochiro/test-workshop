@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- <link rel='stylesheet' href='css/mycss.css' /> -->
+  </head>
+  <body>
+    <!-- <h1><%= response %></h1>
+    <p>Welcome to <%= title %></p> -->
+    <% response.forEach( res => { %>
+      <img src='<%= res.url %>' />
+      
+      <!-- <h1><%= res.url %></h1> -->
+  <% }) %>
+  </body>
+</html>
