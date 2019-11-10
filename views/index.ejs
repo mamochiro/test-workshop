@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <!-- <link rel='stylesheet' href='css/mycss.css' /> -->
-  </head>
-  <body>
-    <!-- <h1><%= response %></h1>
-    <p>Welcome to <%= title %></p> -->
-    <% response.forEach( res => { %>
-      <img src='<%= res.url %>' />
-      
-      <!-- <h1><%= res.url %></h1> -->
-  <% }) %>
-  </body>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='../css/index.css' />
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">
+      <div>
+        <p>Everyone's photo</p>
+      </div>
+      <div>
+        <p><a href="https://unsplash.com">View All 2,724,700</a></p>
+      </div>
+    </div>
+    <div class="gallery" id="gallery">
+      <% response.forEach( res => { %>
+      <!-- <div class="gallery-item">
+        <div class="content"> -->
+          <img class="img__download" src='<%= res.download_url %>' />
+        <!-- </div>
+      </div> -->
+      <% }) %>
+    </div>
+  </div>
+</body>
+
 </html>
